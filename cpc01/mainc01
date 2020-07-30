@@ -1,0 +1,249 @@
+###################
+###	C01	###
+###################
+
+// ex 00::
+ 
+ int     main(void)
+ {
+     int i;
+     i = 2;
+     int *pntr;
+     pntr = &i;
+     ft_ft(pntr);
+     printf("%d", i);
+  }
+ 
+// ex 01::
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_ultimate_ft.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mmcharra <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/07/16 18:46:28 by mmcharra      #+#    #+#                 */
+/*   Updated: 2020/07/20 14:47:46 by mmcharra      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void ft_ultimate_ft(int *********nbr);
+	
+	int		num;
+	int		*p1;
+	int		**p2;
+	int		***p3;
+	int		****p4;
+	int		*****p5;
+	int		******p6;
+	int		*******p7;
+	int		********p8;
+	int		*********p9;
+
+void	ft_ultimate_ft(int *********nbr)
+{
+	*********nbr = 42;
+}
+
+int		main(void)
+{
+	p1 = &num;
+	p2 = &p1;
+	p3 = &p2;
+	p4 = &p3;
+	p5 = &p4;
+	p6 = &p5;
+	p7 = &p6;
+	p8 = &p7;
+	p9 = &p8;
+	ft_ultimate_ft(p9);
+	printf("%d", num);
+}
+
+
+
+// ex02::	void	ft_swap();
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_swap.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mmcharra <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/07/20 15:00:43 by mmcharra      #+#    #+#                 */
+/*   Updated: 2020/07/20 15:07:00 by mmcharra      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void	ft_swap(int *a, int *b);
+
+void	ft_swap(int *a, int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+	printf("%d %d", *a, *b);
+}
+
+int		main(void)
+{
+	int n1;
+	int n2;
+	int *p1;
+	int *p2;
+
+	n1 = 111;
+	n2 = 222;
+	p1 = &n1;
+	p2 = &n2;
+	ft_swap(p1, p2);
+}
+
+
+// ex03:: ft_div_mod();
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_div_mod.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mmcharra <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/07/20 15:09:59 by mmcharra      #+#    #+#                 */
+/*   Updated: 2020/07/20 15:36:32 by mmcharra      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+void	ft_div_mod(int a, int b, int *div, int *mod)
+{
+	int divider;
+	int modular;
+
+	divider = a / b;
+	modular = a % b;
+
+	div = &divider;
+	mod = &modular;
+
+	printf("%d %d ", *div , *mod);
+}
+
+int		main(void)
+{
+	int a;
+	int b;
+	int *div;
+	int *mod;
+
+	a = 9;
+	b = 4;
+	ft_div_mod(a, b, div, mod);
+}
+
+
+
+
+// ex04 ::
+
+
+int     main(void)
+  {
+      int *a;
+      int *b;
+      int num1;
+      int num2;
+      
+      num1 = 9;
+      num2 = 4; 
+      a = &num1;
+      b = &num2;
+      ft_ultimate_div_mod(a, b);
+      return (0);
+  } 
+
+
+// ex05 ::
+
+13 #include <unistd.h>
+ 14 
+ 15 void ft_putstr(char *str);
+ 16 
+ 17 void    ft_putstr(char *str)
+ 18 {
+ 19     int cycle;
+ 20  
+ 21     cycle = 0;
+ 22     while (str[cycle] != '\0')
+ 23     {
+ 24         write(1, &str[cycle], 1);
+ 25         cycle++;
+ 26     }
+ 27 }                 
+ 28 
+ 29 int     main(void)
+ 30 {
+ 31     ft_putstr("Kim Basket");
+ 32 }
+ 
+ // ex06 ::
+  #include <unistd.h>
+  #include <stdio.h>
+  
+  int     ft_strlen(char *str)
+  {
+      int cycle;
+      
+      cycle = 0;
+      while (str[cycle] != '\0')
+      {
+         cycle++;
+      }   
+      return (cycle);
+  }   
+  
+  int     main(void)
+  {
+      printf("%d", ft_strlen("How?"));
+  }
+  
+  // ex07 ;;
+  
+ #include <stdio.h>
+  
+  void ft_rev_int_tab(int *tab, int size)
+  {       
+          int cycle;
+          int rev[size];
+          cycle = 0;
+          while (cycle < size)
+          {   
+              rev[size - cycle - 1 ] = tab[cycle];
+              cycle++; 
+          }   
+  }       
+  
+  int main(void)
+  {
+      int size;
+      size = 10;
+      
+      int ints[10] ={0,1,2,3,4,5,6,7,8,9};
+      ft_rev_int_tab(ints, size);
+  }
+  
+  // ex08 ;;
+  
+  
+           

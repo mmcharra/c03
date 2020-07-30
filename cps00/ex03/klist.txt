@@ -1,0 +1,7 @@
+Credentials cache: API:75010
+        Principal: mmcharra@CODAM.NL
+
+  Issued                Expires               Principal
+Jul 16 17:02:34 2020  Jul 17 03:02:34 2020  krbtgt/CODAM.NL@CODAM.NL
+Jul 16 17:02:35 2020  Jul 17 03:02:34 2020  ldap/ldap-kdc.codam.nl@CODAM.NL
+Jul 16 17:02:35 2020  Jul 17 03:02:34 2020  HTTP/storage-student.codam.nl@CODAM.NL

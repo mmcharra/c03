@@ -1,0 +1,72 @@
+Exercise 00 : ft_purchar
+
+int main(void)
+{
+	char cha;
+
+	cha = 'B';
+	ft_putchar(cha);
+}
+
+Excercise 01 : ft_print_alphabet(void);
+
+int     main(void)
+ {
+ 	ft_print_alphabet();
+ }
+
+Exc 02. : ft_print_reverse_alphabet();
+
+int     main(void)
+{
+	ft_print_reverse_alphabet();
+}
+
+Ex 03 : ft_print_numbers
+
+ int     main(void)
+ {
+     ft_print_numbers();
+ }
+
+Ex 04; ft_is_negative
+
+int     main(void)
+	{
+	int n;
+
+	write(1, "Type a number and press Enter\n", 30);
+	scanf("%d", &n);
+	ft_is_negative(n);
+}
+
+Ex 05;   ft_print_comb
+
+int     main(void)
+{
+	ft_print_comb();
+}
+
+Ex06. ft_print_comb2
+
+ void    ft_print_comb2(void);
+
+ int     main(void)
+ {
+     ft_print_comb2();
+ }
+
+Ex07
+
+int     main(void)
+{   
+	int i;
+	
+	i = -120442;
+	ft_putnbr(i);
+  }
+
+Ex08
+
+
+
